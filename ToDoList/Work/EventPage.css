@@ -1,0 +1,66 @@
+body 
+{
+  background: #f8f9fa;
+  font-family: 'Segoe UI', sans-serif;
+  font-family: sans-serif !important;
+}
+.navbar 
+{
+  background-color: #ffffff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+.navbar-brand 
+{
+  font-weight: 600;
+  color: #2c3e50;
+}
+.form-container 
+{
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  margin-top: 2rem;
+}
+.form-container h4 
+{
+  font-weight: 600;
+  color: #dc3545;
+  margin-bottom: 1.5rem;
+}
+.task-card 
+{
+  border-left: 6px solid #0d6efd;
+  transition: transform 0.2s ease-in-out;
+}
+.task-card:hover 
+{
+  transform: translateY(-4px);
+}
+.priority-High 
+{ 
+  border-left-color: #dc3545 !important; 
+}
+.priority-Medium 
+{ 
+  border-left-color: #ffc107 !important; 
+}
+.priority-Low 
+{ 
+  border-left-color: #198754 !important; 
+}
+.card-title 
+{
+  font-weight: 600;
+  color: #343a40;
+}
+.btn-danger 
+{
+  background-color: #dc3545;
+  border: none;
+}
+.btn-danger:hover 
+{
+  background-color: #c82333;
+}
+
