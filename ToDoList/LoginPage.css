@@ -1,0 +1,17 @@
+body
+{
+    font-family: sans-serif !important;
+}
+.form-control
+{
+    background-color: azure;
+    width: 400px;
+    padding: auto;
+}
+.btn
+{
+    width: 400px;
+    padding: auto;
+    text-transform: uppercase;
+    font-weight: bold;
+}
