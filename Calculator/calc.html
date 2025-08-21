@@ -1,0 +1,149 @@
+<html>
+    <head>
+        <title>Calculator</title>
+        <link rel="stylesheet" href="/style.css">
+    </head>
+    <header style="font-family: sans-serif; font-weight: bolder; text-align:left; font-size: 20px; color:black;">Calculator</header>
+    <body>
+        <div class="val">
+            <table id="table1">
+                <thead>
+                    <tr>
+                        <th colspan="4"><span id="display"></span>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <button class="special" onclick="logic('ac')">AC</button>
+                        </td>
+                        <td>
+                            <button class="special" onclick="logic('Mod')">%</button>
+                        </td>
+                        <td>
+                            <button class="special" onclick="logic('Clear')">CL</button>
+                        </td>
+                        <td>
+                            <button class="special" onclick="logic('Div')">/</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button class="numbers" onclick="handleClick('7')">7</button>
+                        </td>
+                        <td>
+                            <button class="numbers" onclick="handleClick('8')">8</button>
+                        </td>
+                        <td>
+                            <button class="numbers" onclick="handleClick('9')">9</button>
+                        </td>
+                        <td>
+                            <button class="special" onclick="logic('Mul')">*</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button class="numbers" onclick="handleClick('4')">4</button>
+                        </td>
+                        <td>
+                            <button class="numbers" onclick="handleClick('5')">5</button>
+                        </td>
+                        <td>
+                            <button class="numbers" onclick="handleClick('6')">6</button>
+                        </td>
+                        <td>
+                            <button class="special" onclick="logic('Min')">-</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button class="numbers" onclick="handleClick('1')">1</button>
+                        </td>
+                        <td>
+                            <button class="numbers" onclick="handleClick('2')">2</button>
+                        </td>
+                        <td>
+                            <button class="numbers" onclick="handleClick('3')">3</button>
+                        </td>
+                        <td>
+                            <button class="special" onclick="logic('Add')">+</button>
+                        </td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td>
+                            <button class="numbers" onclick="handleClick('00')">00</button>
+                        </td>
+                        <td>
+                            <button class="numbers" onclick="handleClick('0')">0</button>
+                        </td>
+                        <td>
+                            <button class="special" onclick="logic('Dot')">.</button>
+                        </td>
+                        <td>
+                            <button class="special" onclick="logic('Eql')">=</button>
+                        </td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </body>
+    <script>
+        let display = document.getElementById("display");
+        let count=0;
+        function handleClick(value) 
+        {
+            display.innerText += value
+        }
+
+        function logic(value)
+        {
+            if(value=='Add')
+            {
+                display.innerText += '+';
+            }
+            else if(value=='Min')
+            {
+                display.innerText += '-';
+            }
+            else if(value=='Mul')
+            {
+                display.innerText += '*';
+            }
+            else if(value=='Div')
+            {
+                display.innerText += '/';
+            }
+            else if(value=='Mod')
+            {
+                display.innerText += '%';
+            }
+            else if(value=='Dot')
+            {
+                display.innerText += '.';
+            }
+            else if(value=='ac')
+            {
+                display.innerText ='';
+            }
+            else if (value == 'Clear') 
+            {
+                display.innerText = display.innerText.slice(0,-1);
+            }
+            else if(value =='Eql')
+            {
+                try 
+                {
+                    let result = eval(display.innerText);
+                    display.innerText = result;
+                } 
+                catch (error) 
+                {
+                    display.innerText = "Error";
+                }
+            }
+        }
+    </script>
+</html>
